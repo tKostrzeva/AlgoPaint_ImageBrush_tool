@@ -1,0 +1,172 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="ui.css" />
+</head>
+
+<body>
+
+    <main id="tool-layout">
+        <div id="gui-left">
+
+            <div class="ui-component">
+                <label class="uiSectionHdl">Source</label>
+            </div>
+
+            <div class="ui-component">
+                <!-- <label>Upload image</label> -->
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+
+            <div class="ui-component">
+                <label>Posistion X</label>
+                <input type="range" id="imgPosX" min="0" max="1500" value="300"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>300</output>
+            </div>
+
+            <div class="ui-component">
+                <label>Posistion Y</label>
+                <input type="range" id="imgPosY" min="0" max="1500" value="300"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>300</output>
+            </div>
+
+            <div class="ui-component">
+                <hr class="hrSub">
+            </div>
+
+            <div class="ui-component">
+                <label>Width</label>
+                <input type="range" id="imgWidth" min="0" max="1500" value="300"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>300</output>
+            </div>
+
+            <div class="ui-component">
+                <label>Height</label>
+                <input type="range" id="imgHeight" min="0" max="1500" value="300"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>300</output>
+            </div>
+
+            <!--  <div class="ui-component">
+                <hr class="hrMain">
+            </div> -->
+
+            <br><br><br>
+
+            <div class="ui-component">
+                <label class="uiSectionHdl">Brush</label>
+            </div>
+
+            <div class="ui-component">
+                <label>Width</label>
+                <input type="range" id="brushWidth" min="10" max="300" value="100"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>100</output>
+            </div>
+
+            <div class="ui-component">
+                <label>Height</label>
+                <input type="range" id="brushHeight" min="20" max="300" value="20"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>20</output>
+            </div>
+
+            <div class="ui-component">
+                <hr class="hrSub">
+            </div>
+
+            <div class="ui-component">
+                <label>Rotation sensitivity</label>
+                <input type="range" id="brushMov" min="80" max="320" value="200" step="20"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>200</output>
+            </div>
+
+           <!--  <div class="ui-component">
+                <hr class="hrSub">
+            </div> -->
+
+            <br>
+
+            <div class="ui-component">
+                <label id="fixedAngleLabel">Fixed angle</label>
+                <input type="checkbox" id="fixedAngle">
+            </div>
+
+            <br>
+
+            <div class="ui-component">
+                <label>Brush Angle</label>
+                <input type="range" id="brushRot" min="-180" max="180" value="-45" step="15"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>-45</output>
+            </div>
+
+            <!--  <div class="ui-component">
+                <hr class="hrMain">
+            </div> -->
+            
+            <br><br><br>
+
+            <div class="ui-component">
+                <label class="uiSectionHdl">Grid</label>
+            </div>
+
+            <div class="ui-component">
+                <label>Rows</label>
+                <input type="range" id="gridRows" min="1" max="100" value="1" step="1"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>1</output>
+            </div>
+
+            <div class="ui-component">
+                <label>Columns</label>
+                <input type="range" id="gridCols" min="1" max="100" value="1" step="1"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>1</output>
+            </div>
+
+
+            <div class="ui-component">
+                <button id="resetCanvas">Clear Canvas</button>
+            </div>
+
+            <div class="ui-component">
+                <button id="saveImg" onclick="saveImage()">Save PNG</button>
+            </div>
+
+            <!-- <div class="ui-component">
+                <button id="saveVec" onclick="saveVector()">Save a Vector</button>
+            </div> -->
+
+
+            <div class="ui-component">
+                <div class="info">
+                    AlgoPaint — Image v.01
+                    <br>
+                    made by <a href="https://kostrzeva.com" target="_blank" class="link">Tomas Kostrzeva</a>.
+                    <br><br>
+                    Support me with <a href="https://buymeacoffee.com/tomaskostrzeva" class="link">Buy me a coffee</a>.
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+        <div id="artboard">
+            <div id="sketch-wrapper"></div>
+        </div>
+
+    </main>
+
+    <script src="https://www.unpkg.com/p5@1.9.4/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.6.0"></script>
+
+    <script src="main.js"></script>
+
+
+</body>
