@@ -2,23 +2,11 @@
     box-sizing: border-box;
 }
 
-/* @font-face {
-  font-family: "Satoshi-Regular";
-  src: url("fonts/Satoshi-Regular.woff2") format("woff2"),
-    url("fonts/Satoshi-Regular.woff") format("woff"),
-    url("fonts/Satoshi-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-} */
-
 html,
 body {
     background: #000000;
     margin: 0px;
     font-family: sans-serif;
-    /* font-family: myFont;
-    font-weight: 400; */
     font-size: 14px;
     text-align: left;
     overflow: visible;
@@ -72,7 +60,6 @@ label {
 
 .uiSectionHdl {
     color: #555555;
-    /* color: #ffffff; */
     font-size: 22px;
     font-weight: 100;
     margin-top: 0px;
@@ -111,16 +98,6 @@ textarea {
     padding-top: 5px;
     padding-left: 10px;
 }
-
-/* #thumbnail {
-    -webkit-appearance: none;
-    appearance: none;
-    border: 0px solid #000000;
-    border-radius: 0px;
-    width: 50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-} */
 
 input {
     width: 100%;
@@ -185,10 +162,6 @@ input::file-selector-button,
     height: 35px;
     left: 155px;
 }
-
-
-
-
 
 #fontSelector {
     -webkit-appearance: none;
