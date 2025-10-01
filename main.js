@@ -46,7 +46,7 @@ function setup() {
   noCursor();
 
   art = createGraphics(windowWidth - 250, windowHeight);
-  art.pixelDensity(3);
+  //art.pixelDensity(3);
   art.clear();
   art.rectMode(CENTER);
   art.imageMode(CENTER);
