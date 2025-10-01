@@ -4,9 +4,6 @@ let art;
 let imgPosX = document.getElementById("imgPosX");
 let imgPosY = document.getElementById("imgPosY");
 
-let imgWidth = document.getElementById("imgWidth");
-let imgHeight = document.getElementById("imgHeight");
-
 let brushWidth = document.getElementById("brushWidth");
 let brushHeight = document.getElementById("brushHeight");
 
@@ -34,7 +31,7 @@ let angleToggle;
 let status = false;
 
 function preload() {
-  img = loadImage("media/02_1_facies_dorsalis_cerebri.jpg");
+  img = loadImage("media/DPB883339.jpg");
 }
 
 function setup() {
@@ -46,7 +43,7 @@ function setup() {
   noCursor();
 
   art = createGraphics(windowWidth - 250, windowHeight);
-  //art.pixelDensity(3);
+  art.pixelDensity(3);
   art.clear();
   art.rectMode(CENTER);
   art.imageMode(CENTER);
@@ -135,10 +132,10 @@ function draw() {
   sh = brushHeight.value;
 
   /////////// OVLADANIE zdroja 
-  dx = int(imgPosX.value);
-  dy = int(imgPosY.value);
-  dw = map(imgWidth.value, 0, 1500, 0, currImage.width);
-  dh = map(imgHeight.value, 0, 1500, 0, currImage.height);
+  dx = int(map(imgPosX.value, 0, 1500, 0, currImage.width));
+  dy = int(map(imgPosY.value, 0, 1500, 0, currImage.height));
+  dw = int(map(brushWidth.value, 0, 1500, 0, currImage.width));
+  dh = int(map(brushHeight.value, 0, 1500, 0, currImage.height));
 
   ////////// KURZOR
   push();
