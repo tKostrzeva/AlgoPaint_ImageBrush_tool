@@ -2,8 +2,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AlgoPaint ImageBrush</title>
+    <title>AlgoPaint – Image</title>
     <link rel="stylesheet" type="text/css" href="ui.css" />
+
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/satoshi');
+    </style>
+
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Geist+Mono:wght@100..900&family=Geologica:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=SUSE:ital,wght@0,100..900;1,100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+    </style> -->
 </head>
 
 <body>
@@ -41,16 +50,23 @@
 
             <div class="ui-component">
                 <label>Width</label>
-                <input type="range" id="brushWidth" min="10" max="300" value="100"
+                <input type="range" id="brushWidth" min="20" max="1000" value="100" step="10"
                     oninput="this.nextElementSibling.value = this.value">
                 <output>100</output>
             </div>
 
             <div class="ui-component">
                 <label>Height</label>
-                <input type="range" id="brushHeight" min="20" max="300" value="20"
+                <input type="range" id="brushHeight" min="20" max="1000" value="20" step="10"
                     oninput="this.nextElementSibling.value = this.value">
                 <output>20</output>
+            </div>
+
+            <div class="ui-component">
+                <label>Size</label>
+                <input type="range" id="brushSize" min="0.1" max="2.0" value="1.0" step="0.1"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>1.0</output>
             </div>
 
             <div class="ui-component">
@@ -88,21 +104,28 @@
 
             <div class="ui-component">
                 <label>Rows</label>
-                <input type="range" id="gridRows" min="1" max="100" value="1" step="1"
+                <input type="range" id="gridRows" min="1" max="70" value="1" step="1"
                     oninput="this.nextElementSibling.value = this.value">
                 <output>1</output>
             </div>
 
             <div class="ui-component">
                 <label>Columns</label>
-                <input type="range" id="gridCols" min="1" max="100" value="1" step="1"
+                <input type="range" id="gridCols" min="1" max="70" value="1" step="1"
                     oninput="this.nextElementSibling.value = this.value">
                 <output>1</output>
             </div>
 
+            <br><br><br>
 
             <div class="ui-component">
-                <button id="resetCanvas">Clear Canvas</button>
+                <div id="keyInfo">
+                     To undo an action, <br>press the "Z" key.
+                </div>
+            </div>
+
+            <div class="ui-component">
+                <button id="resetCanvas" class="resetCanvas">Clear canvas</button>
             </div>
 
             <div class="ui-component">
@@ -110,7 +133,7 @@
             </div>
             <div class="ui-component">
                 <div class="info">
-                    AlgoPaint — ImageBrush v01
+                    AlgoPaint – Image v02
                     <br>
                     made by <a href="https://kostrzeva.com" target="_blank" class="link">Tomas Kostrzeva</a>.
                     <br><br>
@@ -130,6 +153,4 @@
     <script src="https://unpkg.com/p5.js-svg@1.6.0"></script>
 
     <script src="main.js"></script>
-
-
 </body>
